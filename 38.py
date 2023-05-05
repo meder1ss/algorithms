@@ -1,0 +1,7 @@
+line = input().split()
+k = int(line[0])
+n = int(line[1])
+priority = list(map(int, input().split()))
+priority.sort(reverse=True)
+number = n // k * sum(priority) + sum(priority[:n % k])
+print(number)
